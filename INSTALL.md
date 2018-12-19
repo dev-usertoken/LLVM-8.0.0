@@ -10,7 +10,7 @@
   ./bin/llvm-lit -sv --param cxx_under_test=`pwd`/bin/clang ../projects/libcxx/test/
 
   rm CMakeCache.txt
-  CXX="$(pwd)/llvm/build/bin/clang++" \
+  CXX="$(pwd)/bin/clang++" \
   CXXFLAGS="-cxx-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -isystem /usr/include" \
   cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
 
